@@ -35,6 +35,7 @@ public class LivrariaApplication {
             /**
              * Monte a mensagem de erro avisando que já existe um Livro cadastrado sobre o nome e genero passados
              */
+            System.out.println("O livro "+ nome + " do genero " + genero + " ja foi cadastrado na lista ");
         }
     }
 
@@ -51,6 +52,7 @@ public class LivrariaApplication {
     }
 
     public String listarLivrosFantasia(){
+        return null;
         /**
          * Retorne uma String contendo todos os Livros que são de fantasia.
          */
