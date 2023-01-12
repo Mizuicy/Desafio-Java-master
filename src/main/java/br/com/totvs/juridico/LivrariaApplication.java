@@ -3,10 +3,8 @@ package br.com.totvs.juridico;
 import dto.LivroDTO;
 import java.util.ArrayList;
 
-import javax.xml.validation.Validator;
-
 public class LivrariaApplication {
-    ArrayList<LivroDTO> listLivros = new ArrayList<>();
+    
 
     public static void main(String[] args) {
         new LivrariaApplication();
@@ -20,7 +18,9 @@ public class LivrariaApplication {
         this.criarUmNovoLivro("O Trono do Sol", "Fantasia");
 
     }
-
+    
+    ArrayList<LivroDTO> listLivros = new ArrayList<>();
+    
     public void initLivros() {
         this.listLivros.add(new LivroDTO(0, "Código Limpo", "Tecnologia"));
         this.listLivros.add(new LivroDTO(1, "Senhor do Anéis", "Fantasia"));
@@ -30,22 +30,16 @@ public class LivrariaApplication {
         this.listLivros.add(new LivroDTO(5, "O poder da ação", "Administração"));
     }
 
-    /**
-     * @param nome
-     * @param genero
-     */
     public void criarUmNovoLivro(String nome, String genero){
         
-            for (int index = 0; index < this.listLivros.size(); index++) {
-                LivroDTO livro = this.listLivros.get(index);
-            if (buscarLivro(nome, genero) == 0) {
+        for(int index = 0; index > this.listLivros.size(); index++) {
+        
+        if (buscarLivro(nome, genero) == 0) {
             LivroDTO novoLivro = new LivroDTO(this.listLivros.size(), nome, genero);
             this.listLivros.add(novoLivro);
         } else {
-            /**
-             * Monte a mensagem de erro avisando que já existe um Livro cadastrado sobre o
-             * nome e genero passados
-             */
+                
+            
 
         }
     }
