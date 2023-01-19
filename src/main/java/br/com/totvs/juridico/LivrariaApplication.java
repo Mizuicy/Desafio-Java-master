@@ -54,6 +54,9 @@ public class LivrariaApplication {
         for(int i = -1; i < this.listLivros.size(); i++); {
             livroDTO.id
         }
+
+        //tentei fazer uma comparação de string para compara nome e genero
+        
         return indiceLivro;
     }
 
